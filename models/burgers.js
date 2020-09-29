@@ -1,24 +1,39 @@
-var orm = require("../config/orm");
+// Dependencies
+const orm = require("../config/orm.js");
 
-var burger = {
+// Burger Model
+const burgers = {
 
-    selectAll: function(cb) {
-        orm.selectAll("burger", function(res) {
-            cb(res);
+    // SelectAll method to call orm.selectAll
+    selectAll: (callback) => {
+
+        orm.selectAll("burger", (res) => {
+            callback(res);
         });
     },
-    
-    insertOne: function(column, value, cb) {
-        orm.insertOne("burger", column, value, function(res) {
-            cb(res);
+
+    // Insert method to call orm.insert
+    insert: (burgerNAme, devoured, callback) => {
+
+        orm.insertOne("burger", "burger_name", "devoured", burgerNAme, devoured, (res) => {
+            callback(res);
         });
     },
-    
-    updateOne: function (burgerId, cb) {
-        orm.updateOne("burger", "devoured", burgerId, function (res) {
-          cb(res);
+
+    // Update method to call orm.updateOne
+    update: (id, devoured, callback) => {
+        orm.updateOne("burger", "devoured", devoured, "id", id, (res) => {
+            callback(res);
         });
-      }
+    },
+
+    // Delete method to call orm.delete
+    delete: (id, callback) => {
+        orm.delete("burger", "id", id, (res) => {
+            callback(res);
+        });
+    }
 };
 
-module.exports = burger;
+// Export model for burgers_controller.js to use.
+module.exports = burgers;
