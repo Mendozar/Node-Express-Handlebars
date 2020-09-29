@@ -2,7 +2,7 @@
 var express = require("express");
 var router = express.Router();
 
-var burger = require("../models/burger");
+var burger = require("../models/burgers");
 
 // Root folder
 router.get("/", (req, res) => {
@@ -32,8 +32,8 @@ router.put("/api/burger/:id", (req, res) => {
       if (result.changedRows == 0) {
 
         // If no rows were changed, then 404
-
         return res.status(404).end();
+
       } else {
         res.status(200).end();
       }
