@@ -12,7 +12,7 @@
         <div class="col-sm-4 mt-2">
             <h3 align="center">Hamburgers</h3>
             <ul class="list-group">
-                {{#each hamburgers}}
+                {{#each burger}}
                     {{#unless devoured}} 
                         <li class="list-group-item">
                             <p class="d-inline-flex my-2">
@@ -26,7 +26,7 @@
         <div class="col-sm-4 mt-2">
             <h3 align="center">Devoured List</h3>
             <ul class="list-group">
-            {{#each hamburgers}}
+            {{#each burgers}}
                 {{#if devoured}}
                     <li class="list-group-item">
                         <p class="d-inline-flex my-2">
