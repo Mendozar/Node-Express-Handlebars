@@ -12,10 +12,11 @@ This application logs burgers that you've added and burgers that you've eaten.
 * [Heroku](https://www.heroku.com/)
     
 ### Dependencies
-    ---
-    * [Express](https://expressjs.com/)
-    * [Handlebars](https://handlebarsjs.com/)
-    * [mysql](https://www.npmjs.com/package/mysql)
+---
+    
+* [Express](https://expressjs.com/)
+* [Handlebars](https://handlebarsjs.com/)
+* [mysql](https://www.npmjs.com/package/mysql)
 
 ## Assignment Challenges
 
