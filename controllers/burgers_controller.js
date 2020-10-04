@@ -17,14 +17,14 @@ router.get("/", (req, res) => {
 });
 
 // burger
-router.post("/api/burger", (req, res) => {
+router.post("/api/hamburger", (req, res) => {
     burger.insertOne("burger_name", req.body.burger_name, result => {
         res.json({id: result.insertId});
     });
 });
 
 // burger/id
-router.put("/api/burger/:id", (req, res) => {
+router.put("/api/hamburger/:id", (req, res) => {
 
     var burgerId = req.params.id;
   
